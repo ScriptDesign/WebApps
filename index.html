@@ -1,0 +1,64 @@
+.<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobile Simulator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript">
+		var paddingSize=20;
+	</script>
+	<style type="text/css">
+	html, body{
+		font-size: 16px;
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		background-color: #ddd;
+	}
+	/*resize notificaction*/
+	#screensize-indicator{
+		padding: 20px;
+		background-color: yellow;
+		border: 1px solid dark-yellow;
+		display: none;
+	}
+	#screensize-size-indicator, #screensize-resize-indicator{
+		display: none;
+	}
+	@media screen and (min-width: 768px), screen and (max-width: 300px){
+		#screensize-size-indicator, #screensize-indicator{
+			display: block;
+		}
+	}
+	/*widget search-bar*/
+	.search-bar{
+		padding: 
+	}
+</style>
+</head>
+<body>
+	<div id="screensize-indicator">
+		<span id="screensize-size-indicator">
+			For best results please keep the scren width between 300px and 768px.
+		</span>
+		<span id="screensize-resize-indicator">
+			Screen size chagned. For best results please refresh the page.
+		</span>
+	</div>
+	<div id="application-wrapper">
+		<!--widget search-bar-->
+		<div class="search-bar">
+			<input type="text" class="search-bar-box">
+		</div>
+	</Div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$( window ).resize(function() {
+				$("#screensize-indicator").css("display","block");
+				$("#screensize-resize-indicator").css("display","block");
+			});
+		});
+	</script>
+</body>
+</html>
