@@ -1,40 +1,11 @@
-.<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Mobile Simulator</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></style>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script type="text/javascript">
-		var paddingSize=20;
-	</script>
-	<style type="text/css">
-	html, body{
-		font-size: 16px;
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		background-color: #ddd;
-	}
-	/*resize notificaction*/
-	#screensize-indicator{
-		padding: 20px;
-		background-color: yellow;
-		border: 1px solid dark-yellow;
-		display: none;
-	}
-	#screensize-size-indicator, #screensize-resize-indicator{
-		display: none;
-	}
-	@media screen and (min-width: 768px), screen and (max-width: 300px){
-		#screensize-size-indicator, #screensize-indicator{
-			display: block;
-		}
-	}
-	/*widget search-bar*/
-	.search-bar{
-		padding: 
-	}
-</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></style>
+	<script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
 	<div id="screensize-indicator">
@@ -47,17 +18,22 @@
 	</div>
 	<div id="application-wrapper">
 		<!--widget search-bar-->
-		<div class="search-bar">
-			<input type="text" class="search-bar-box">
+		<div id="search-bar">
+			<div id="search-bar-menu-button"><img src="http://via.placeholder.com/64x64"></div>
+			<input type="text" id="search-bar-box" placeholder="Search">
+			<div id="search-bar-search-button"><img src="http://via.placeholder.com/64x64"></div>
 		</div>
 	</Div>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		$( document ).ready(function() {
 			$( window ).resize(function() {
-				$("#screensize-indicator").css("display","block");
-				$("#screensize-resize-indicator").css("display","block");
+				/*$("#screensize-indicator").css("display","block");
+				$("#screensize-resize-indicator").css("display","block");*/
 			});
+			$("#search-bar-box").bind('keyup keydown change', function () {
+				$("#search-bar-search-button").show();
+			}).change();
+			$("#search-bar-search-button").hide();
 		});
 	</script>
 </body>

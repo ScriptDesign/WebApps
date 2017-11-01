@@ -1,0 +1,90 @@
+@padding-low: 10px;
+@padding: 20px;
+@padding-high: 35px;
+
+@white: #fff;
+@yellow: #ff9;
+@dark-yellow: #c90;
+@light-gray:#ddd;
+
+@line-height:16px;
+
+@icon-small:24px;
+@icon:32px;
+@icon-large:48px;
+@icon-huge:64px;
+
+html, body{
+	font-size: @line-height;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	background-color: @light-gray;
+}
+img{
+	display: block;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+/*resize notificaction*/
+#screensize-indicator{
+	padding: @padding;
+	background-color: @yellow;
+	border: 1px solid @dark-yellow;
+	display: none;
+}
+#screensize-size-indicator, #screensize-resize-indicator{
+	display: none;
+}
+@media screen and (min-width: 768px), screen and (max-width: 300px){
+	#screensize-size-indicator, #screensize-indicator{
+		display: block;
+	}
+}
+/*application-wrapper*/
+#application-wrapper{
+	background-color: @white;
+}
+#application-wrapper > div{
+	padding-top: @padding-low;
+	padding-bottom: @padding-low;
+}
+#application-wrapper > div:first-child{
+	padding-top: @padding;
+	padding-bottom: @padding-low;
+}
+#application-wrapper > div:last-child{
+	padding-top: @padding-low;
+	padding-bottom: @padding;
+}
+
+/*widget search-bar*/
+#search-bar{
+	background-color: @white;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row nowrap;
+}
+#search-bar-menu-button{
+	width: @icon-huge;
+	height: @icon-huge;
+	padding: 0px 0px;
+	box-sizing: content-box;
+}
+#search-bar-box{
+	display: block;
+	padding-left: @padding;
+	border: 0px solid black;
+	height: @icon-huge;
+	flex: 1;
+}
+#search-bar-search-button{
+	width: @icon-huge;
+	height: @icon-huge;
+	padding: 0px 0px;
+	box-sizing: content-box;
+	display: none;
+}
